@@ -1,8 +1,8 @@
 package flow
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
+	"github.com/liuhailove/gmiter/core/base"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
 )
 
 var (

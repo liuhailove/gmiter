@@ -2,9 +2,9 @@ package config
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/logging"
 	"github.com/pkg/errors"
 )
 
@@ -427,6 +427,10 @@ func NewDefaultConfig() *Entity {
 				KeyPrefix: DefaultEtcdV3Prefix,
 				// etcd地址列表，多个逗号分割
 				Endpoints: "",
+			},
+			RedisClusterConfig: RedisClusterConfig{
+				// 是否为集群，默认为真
+				IsCluster: true,
 			},
 		},
 	}

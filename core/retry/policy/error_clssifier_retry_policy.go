@@ -1,9 +1,9 @@
 package policy
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/classify"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/context"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/core/retry/classify"
+	"github.com/liuhailove/gmiter/core/retry/context"
 )
 
 type ErrorClassifierRetryPolicy struct {

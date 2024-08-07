@@ -2,8 +2,8 @@ package circuitbreaker
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"reflect"
 	"sync"

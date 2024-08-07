@@ -1,16 +1,16 @@
 package api
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/circuitbreaker"
-	"git.garena.com/honggang.liu/seamiter-go/core/flow"
-	"git.garena.com/honggang.liu/seamiter-go/core/gray"
-	"git.garena.com/honggang.liu/seamiter-go/core/hotspot"
-	"git.garena.com/honggang.liu/seamiter-go/core/isolation"
-	"git.garena.com/honggang.liu/seamiter-go/core/log"
-	"git.garena.com/honggang.liu/seamiter-go/core/mock"
-	"git.garena.com/honggang.liu/seamiter-go/core/stat"
-	"git.garena.com/honggang.liu/seamiter-go/core/system"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/circuitbreaker"
+	"github.com/liuhailove/gmiter/core/flow"
+	"github.com/liuhailove/gmiter/core/gray"
+	"github.com/liuhailove/gmiter/core/hotspot"
+	"github.com/liuhailove/gmiter/core/isolation"
+	"github.com/liuhailove/gmiter/core/log"
+	"github.com/liuhailove/gmiter/core/mock"
+	"github.com/liuhailove/gmiter/core/stat"
+	"github.com/liuhailove/gmiter/core/system"
 )
 
 var globalSlotChain = BuildDefaultSlotChain()

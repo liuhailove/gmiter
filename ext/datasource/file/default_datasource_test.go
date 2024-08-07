@@ -1,7 +1,7 @@
 package file
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource/util"
+	"github.com/liuhailove/gmiter/ext/datasource/util"
 	"testing"
 )
 

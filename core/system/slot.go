@@ -1,9 +1,9 @@
 package system
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/stat"
-	"git.garena.com/honggang.liu/seamiter-go/core/system_metric"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/stat"
+	"github.com/liuhailove/gmiter/core/system_metric"
 )
 
 const (

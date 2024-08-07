@@ -2,8 +2,8 @@ package hotspot
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"reflect"
 	"sync"
@@ -66,8 +66,9 @@ func getTrafficControllersFor(res string) []TrafficShapingController {
 
 // LoadRules replaces all old hotspot param flow rules with the given rules.
 // Return value:
-//   bool: indicates whether the internal map has been changed;
-//   error: indicates whether occurs the error.
+//
+//	bool: indicates whether the internal map has been changed;
+//	error: indicates whether occurs the error.
 func LoadRules(rules []*Rule) (bool, error) {
 	resRulesMap := make(map[string][]*Rule, 16)
 	for _, rule := range rules {

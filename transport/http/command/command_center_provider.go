@@ -1,8 +1,8 @@
 package command
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/transport"
 )
 
 var (
@@ -23,7 +23,8 @@ func resolveInstance() {
 }
 
 // GetCommandCenter
-//  Get resolved {@link CommandCenter} instance.
+//
+//	Get resolved {@link CommandCenter} instance.
 func GetCommandCenter() transport.CommandCenter {
 	return commandCenter
 }

@@ -2,8 +2,8 @@ package rule
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"testing"
 	"time"

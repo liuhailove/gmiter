@@ -1,11 +1,11 @@
 package api
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/core/flow"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/spi"
-	"git.garena.com/honggang.liu/seamiter-go/transport/http"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/core/flow"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/spi"
+	"github.com/liuhailove/gmiter/transport/http"
 )
 
 func defaultRegister() {

@@ -2,7 +2,7 @@ package context
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
+	"github.com/liuhailove/gmiter/core/retry"
 )
 
 type RtyContextSupport struct {

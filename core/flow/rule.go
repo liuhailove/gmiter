@@ -5,7 +5,7 @@ import (
 
 	jsoniter "github.com/json-iterator/go"
 
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/util"
 )
 
 // RelationStrategy 表示基于调用关系的流控策略。

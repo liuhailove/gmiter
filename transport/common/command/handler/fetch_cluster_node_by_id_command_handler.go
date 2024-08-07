@@ -2,7 +2,7 @@ package handler
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
+	"github.com/liuhailove/gmiter/transport/common/command"
 )
 
 var (

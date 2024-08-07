@@ -1,6 +1,6 @@
 package backoff
 
-import "git.garena.com/honggang.liu/seamiter-go/core/retry"
+import "github.com/liuhailove/gmiter/core/retry"
 
 // NoBackOffPolicy 没有任何操作的策略，所有的重试操作处理都不会暂停
 type NoBackOffPolicy struct {

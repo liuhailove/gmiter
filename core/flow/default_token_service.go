@@ -3,7 +3,7 @@ package flow
 import (
 	jsoniter "github.com/json-iterator/go"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/core/base"
 )
 
 var (

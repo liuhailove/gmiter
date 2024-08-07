@@ -1,6 +1,6 @@
 package policy
 
-import "git.garena.com/honggang.liu/seamiter-go/core/retry"
+import "github.com/liuhailove/gmiter/core/retry"
 
 // AlwaysRetryPolicy 一种无穷重试策略
 type AlwaysRetryPolicy struct {

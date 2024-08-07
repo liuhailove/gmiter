@@ -1,6 +1,6 @@
 package backoff
 
-import "git.garena.com/honggang.liu/seamiter-go/core/retry"
+import "github.com/liuhailove/gmiter/core/retry"
 
 // BackOffPolicy 回退策略，控制两次重试之间的回退策略.
 type BackOffPolicy interface {

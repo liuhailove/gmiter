@@ -1,14 +1,14 @@
 package flow
 
 import (
-	base2 "git.garena.com/honggang.liu/seamiter-go/core/base"
+	base2 "github.com/liuhailove/gmiter/core/base"
 	"math"
 	"sync/atomic"
 	"time"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 )
 
 func calcGlobalThreshold(rule *Rule) float64 {

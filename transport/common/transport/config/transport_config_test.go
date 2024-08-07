@@ -2,7 +2,7 @@ package config
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
+	"github.com/liuhailove/gmiter/core/config"
 	"testing"
 )
 

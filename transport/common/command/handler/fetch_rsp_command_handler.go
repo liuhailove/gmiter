@@ -2,10 +2,10 @@ package handler
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/ext/datasource"
+	"github.com/liuhailove/gmiter/transport/common/command"
 )
 
 var (

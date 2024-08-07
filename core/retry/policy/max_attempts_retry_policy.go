@@ -1,8 +1,8 @@
 package policy
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/context"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/core/retry/context"
 )
 
 const (

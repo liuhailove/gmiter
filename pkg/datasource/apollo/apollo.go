@@ -1,10 +1,10 @@
 package apollo
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource"
 	"github.com/apolloconfig/agollo/v4"
 	"github.com/apolloconfig/agollo/v4/component/log"
 	"github.com/apolloconfig/agollo/v4/env/config"
+	"github.com/liuhailove/gmiter/ext/datasource"
 	"github.com/pkg/errors"
 )
 

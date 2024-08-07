@@ -2,7 +2,7 @@ package client
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport/endpoint"
+	"github.com/liuhailove/gmiter/transport/common/transport/endpoint"
 )
 
 type SimpleHttpRequest struct {

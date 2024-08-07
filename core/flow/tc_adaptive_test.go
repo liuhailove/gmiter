@@ -3,8 +3,8 @@ package flow
 import (
 	"encoding/json"
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/system_metric"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/system_metric"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

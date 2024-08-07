@@ -1,6 +1,6 @@
 package util
 
-import "git.garena.com/honggang.liu/seamiter-go/ext/datasource"
+import "github.com/liuhailove/gmiter/ext/datasource"
 
 var (
 	flowDataSource         datasource.DataSource

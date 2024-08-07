@@ -1,8 +1,8 @@
 package policy
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/context"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/core/retry/context"
 )
 
 // NeverRetryPolicy 允许第一次尝试，不允许之后的重试

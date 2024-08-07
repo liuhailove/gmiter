@@ -1,8 +1,8 @@
 package spi
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/constants"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/constants"
+	"github.com/liuhailove/gmiter/core/base"
 )
 
 // InitialFunc 初始化Func

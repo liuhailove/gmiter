@@ -1,9 +1,10 @@
 package client
 
-import "git.garena.com/honggang.liu/seamiter-go/transport/common/command"
+import "github.com/liuhailove/gmiter/transport/common/command"
 
 // CommandClient
-//  Basic interface for clients that sending commands
+//
+//	Basic interface for clients that sending commands
 type CommandClient interface {
 
 	// SendCommand

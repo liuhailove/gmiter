@@ -1,8 +1,8 @@
 package gray
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/logging"
 	"strings"
 )
 

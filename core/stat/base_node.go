@@ -1,10 +1,10 @@
 package stat
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	base2 "git.garena.com/honggang.liu/seamiter-go/core/stat/base"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/config"
+	base2 "github.com/liuhailove/gmiter/core/stat/base"
+	"github.com/liuhailove/gmiter/util"
 	"sync/atomic"
 )
 

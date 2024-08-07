@@ -2,9 +2,9 @@ package metric
 
 import (
 	"encoding/binary"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"io"
 	"os"
 	"sync"

@@ -2,7 +2,7 @@ package micro_opentrace
 
 import (
 	"context"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/core/base"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/server"
 	"github.com/opentracing/opentracing-go"

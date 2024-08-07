@@ -1,8 +1,8 @@
 package backoff
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/logging"
 	"math/rand"
 	"strconv"
 )

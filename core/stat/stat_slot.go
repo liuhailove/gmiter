@@ -1,9 +1,9 @@
 package stat
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/base"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
+	"github.com/liuhailove/gmiter/util"
 )
 
 const (

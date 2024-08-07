@@ -1,13 +1,13 @@
 package apollo
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource"
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource/util"
 	apollo_config "github.com/apolloconfig/agollo/v4/env/config"
+	"github.com/liuhailove/gmiter/ext/datasource"
+	"github.com/liuhailove/gmiter/ext/datasource/util"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	util2 "git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/logging"
+	util2 "github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"strings"
 )

@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/log/metric"
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
+	"github.com/liuhailove/gmiter/core/log/metric"
+	"github.com/liuhailove/gmiter/ext/datasource"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/command"
 )
 
 var (

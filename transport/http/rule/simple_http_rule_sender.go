@@ -1,13 +1,13 @@
 package rule
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
-	config2 "git.garena.com/honggang.liu/seamiter-go/transport/common/transport/config"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport/endpoint"
-	"git.garena.com/honggang.liu/seamiter-go/transport/http/heartbeat/client"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/ext/datasource"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/command"
+	config2 "github.com/liuhailove/gmiter/transport/common/transport/config"
+	"github.com/liuhailove/gmiter/transport/common/transport/endpoint"
+	"github.com/liuhailove/gmiter/transport/http/heartbeat/client"
 	"github.com/pkg/errors"
 	"strconv"
 	"strings"

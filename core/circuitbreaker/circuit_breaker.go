@@ -1,11 +1,11 @@
 package circuitbreaker
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	sbase "git.garena.com/honggang.liu/seamiter-go/core/stat/base"
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/base"
+	sbase "github.com/liuhailove/gmiter/core/stat/base"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"reflect"
 	"sync/atomic"

@@ -2,8 +2,8 @@ package reflection
 
 import (
 	"context"
-	"git.garena.com/honggang.liu/seamiter-go/ext/micro"
-	rpb "git.garena.com/honggang.liu/seamiter-go/pkg/adapters/micro_opentrace/reflection/grpc_reflection_v1alpha"
+	"github.com/liuhailove/gmiter/ext/micro"
+	rpb "github.com/liuhailove/gmiter/pkg/adapters/micro_opentrace/reflection/grpc_reflection_v1alpha"
 	"github.com/micro/go-micro/server"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

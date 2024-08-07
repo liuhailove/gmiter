@@ -3,9 +3,9 @@ package support
 import (
 	"errors"
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/classify"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/core/retry/classify"
+	"github.com/liuhailove/gmiter/util"
 	"testing"
 	"time"
 )

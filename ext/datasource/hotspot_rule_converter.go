@@ -2,8 +2,8 @@ package datasource
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/hotspot"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/core/hotspot"
+	"github.com/liuhailove/gmiter/logging"
 	"github.com/pkg/errors"
 	"strconv"
 )

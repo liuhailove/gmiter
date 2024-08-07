@@ -2,11 +2,11 @@ package support
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/backoff"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/policy"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/core/retry/backoff"
+	"github.com/liuhailove/gmiter/core/retry/policy"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 )
 
 const (

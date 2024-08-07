@@ -2,7 +2,7 @@ package base
 
 //
 //import (
-//	"git.garena.com/honggang.liu/seamiter-go/logging"
+//	"github.com/liuhailove/gmiter/logging"
 //	"sync"
 //)
 //

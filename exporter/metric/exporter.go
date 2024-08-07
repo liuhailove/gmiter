@@ -1,8 +1,8 @@
 package metric
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/exporter/metric/prometheus"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/exporter/metric/prometheus"
 	"net/http"
 	"os"
 	"strconv"

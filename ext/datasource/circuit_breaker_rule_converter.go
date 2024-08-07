@@ -1,6 +1,6 @@
 package datasource
 
-import cb "git.garena.com/honggang.liu/seamiter-go/core/circuitbreaker"
+import cb "github.com/liuhailove/gmiter/core/circuitbreaker"
 
 // CircuitBreakerRule encompasses the fields of circuit breaking rule.
 type CircuitBreakerRule struct {

@@ -1,10 +1,10 @@
 package base
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/core/base"
 	"sync/atomic"
 
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/logging"
 	"github.com/pkg/errors"
 )
 

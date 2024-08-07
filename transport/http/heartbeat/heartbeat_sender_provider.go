@@ -1,8 +1,8 @@
 package heartbeat
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/transport"
 	"sync"
 )
 

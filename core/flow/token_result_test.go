@@ -3,7 +3,7 @@ package flow
 //import (
 //	"encoding/json"
 //	"fmt"
-//	"git.garena.com/honggang.liu/seamiter-go/base"
+//	"github.com/liuhailove/gmiter/base"
 //	"testing"
 //)
 //

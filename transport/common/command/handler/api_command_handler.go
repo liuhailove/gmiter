@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/liuhailove/gmiter/transport/common/command"
 )
 
 var (
@@ -13,7 +13,8 @@ func init() {
 	command.RegisterHandler(apiCommandHandlerInst.Name(), apiCommandHandlerInst)
 }
 
-//  List all available command handlers by request:
+//	List all available command handlers by request:
+//
 // {@code curl http://ip:commandPort/api}
 type apiCommandHandler struct {
 }

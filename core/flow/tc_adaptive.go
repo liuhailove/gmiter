@@ -1,8 +1,8 @@
 package flow
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/system_metric"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/core/system_metric"
+	"github.com/liuhailove/gmiter/logging"
 )
 
 // MemoryAdaptiveTrafficShapingCalculator is a memory adaptive traffic shaping calculator
@@ -11,6 +11,7 @@ import (
 // If the watermark is less than Rule.MemLowWaterMarkBytes, the threshold is Rule.LowMemUsageThreshold.
 // If the watermark is greater than Rule.MemHighWaterMarkBytes, the threshold is Rule.HighMemUsageThreshold.
 // Otherwise, the threshold is ((watermark - MemLowWaterMarkBytes)/(MemHighWaterMarkBytes - MemLowWaterMarkBytes)) *
+//
 //	(HighMemUsageThreshold - LowMemUsageThreshold) + LowMemUsageThreshold.
 type MemoryAdaptiveTrafficShapingCalculator struct {
 	owner                 *TrafficShapingController

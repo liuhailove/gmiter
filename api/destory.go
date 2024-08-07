@@ -1,6 +1,6 @@
 package api
 
-import "git.garena.com/honggang.liu/seamiter-go/spi"
+import "github.com/liuhailove/gmiter/spi"
 
 func init() {
 	// 默认销毁方法注册

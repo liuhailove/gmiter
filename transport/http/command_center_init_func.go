@@ -2,12 +2,12 @@ package http
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/constants"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	_ "git.garena.com/honggang.liu/seamiter-go/transport/common/command/handler" // 强制初始化
-	"git.garena.com/honggang.liu/seamiter-go/transport/http/command"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/constants"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/logging"
+	_ "github.com/liuhailove/gmiter/transport/common/command/handler" // 强制初始化
+	"github.com/liuhailove/gmiter/transport/http/command"
+	"github.com/liuhailove/gmiter/util"
 )
 
 var (

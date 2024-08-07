@@ -1,7 +1,7 @@
 package mock
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/core/base"
 )
 
 type panicTrafficShapingController struct {

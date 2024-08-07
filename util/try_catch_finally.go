@@ -2,7 +2,7 @@ package util
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/logging"
 	"reflect"
 )
 

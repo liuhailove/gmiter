@@ -2,17 +2,17 @@ package datasource
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	cb "git.garena.com/honggang.liu/seamiter-go/core/circuitbreaker"
-	"git.garena.com/honggang.liu/seamiter-go/core/flow"
-	"git.garena.com/honggang.liu/seamiter-go/core/gray"
-	"git.garena.com/honggang.liu/seamiter-go/core/hotspot"
-	"git.garena.com/honggang.liu/seamiter-go/core/isolation"
-	"git.garena.com/honggang.liu/seamiter-go/core/mock"
-	retry "git.garena.com/honggang.liu/seamiter-go/core/retry/rule"
-	"git.garena.com/honggang.liu/seamiter-go/core/system"
-	"git.garena.com/honggang.liu/seamiter-go/core/weight_router"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/liuhailove/gmiter/core/base"
+	cb "github.com/liuhailove/gmiter/core/circuitbreaker"
+	"github.com/liuhailove/gmiter/core/flow"
+	"github.com/liuhailove/gmiter/core/gray"
+	"github.com/liuhailove/gmiter/core/hotspot"
+	"github.com/liuhailove/gmiter/core/isolation"
+	"github.com/liuhailove/gmiter/core/mock"
+	retry "github.com/liuhailove/gmiter/core/retry/rule"
+	"github.com/liuhailove/gmiter/core/system"
+	"github.com/liuhailove/gmiter/core/weight_router"
 )
 
 func checkSrcComplianceJson(src []byte) (bool, error) {

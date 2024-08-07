@@ -1,8 +1,8 @@
 package config
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
@@ -473,11 +473,12 @@ func ApolloDatasourceSecret() string {
 	return globalCfg.Sea.ApolloDatasourceConfig.Secret
 }
 
-// RedisClusterPassword redis host
+// RedisClusterHost redis host
 func RedisClusterHost() string {
 	return globalCfg.Sea.RedisClusterConfig.Host
 }
-// RedisClusterPassword redis port
+
+// RedisClusterPort redis port
 func RedisClusterPort() int64 {
 	return globalCfg.Sea.RedisClusterConfig.Port
 }
@@ -490,4 +491,9 @@ func RedisClusterPassword() string {
 // RedisClusterDatabase redis集群DB索引
 func RedisClusterDatabase() int {
 	return globalCfg.Sea.RedisClusterConfig.Database
+}
+
+// RedisIsCluster redis是否为集群
+func RedisIsCluster() bool {
+	return globalCfg.Sea.RedisClusterConfig.IsCluster
 }

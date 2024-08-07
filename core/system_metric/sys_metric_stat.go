@@ -1,8 +1,8 @@
 package system_metric
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/shirou/gopsutil/v3/load"
 	"github.com/shirou/gopsutil/v3/mem"
 	"os"
@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
 	"github.com/shirou/gopsutil/v3/process"
 )
 

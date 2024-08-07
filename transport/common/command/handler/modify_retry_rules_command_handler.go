@@ -2,11 +2,11 @@ package handler
 
 import (
 	"fmt"
-	retry "git.garena.com/honggang.liu/seamiter-go/core/retry/rule"
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource"
-	"git.garena.com/honggang.liu/seamiter-go/ext/datasource/util"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
+	retry "github.com/liuhailove/gmiter/core/retry/rule"
+	"github.com/liuhailove/gmiter/ext/datasource"
+	"github.com/liuhailove/gmiter/ext/datasource/util"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/command"
 )
 
 var (

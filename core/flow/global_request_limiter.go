@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
+	"github.com/liuhailove/gmiter/core/config"
 )
 
 var (

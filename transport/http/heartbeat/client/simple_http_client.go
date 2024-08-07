@@ -3,8 +3,8 @@ package client
 import (
 	"bytes"
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport/endpoint"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/transport/endpoint"
 	"net"
 	"net/http"
 	"net/url"
@@ -14,7 +14,8 @@ import (
 )
 
 // SimpleHttpClient
-//  * <p>
+//   - <p>
+//
 // * A very simple HTTP client that only supports GET/POST method and plain text request body.
 // * The Content-Type header is always set as <pre>application/x-www-form-urlencoded</pre>.
 // * All parameters in the request will be encoded using {@link URLEncoder#encode(String, String)}.
@@ -142,7 +143,7 @@ func (s SimpleHttpClient) getRequestPath(methodType string, requestPath string, 
 // *
 // * @param paramsMap pair of parameters
 // * @param charset   charset
-//  * @return encoded request parameters, or empty string ("") if no parameters are provided
+//   - @return encoded request parameters, or empty string ("") if no parameters are provided
 func (s SimpleHttpClient) encodeRequestParams(paramsMap map[string]string, charset string) string {
 	if paramsMap == nil || len(paramsMap) == 0 {
 		return ""

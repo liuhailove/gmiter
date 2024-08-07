@@ -1,21 +1,21 @@
 package flow
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/constants"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/spi"
+	"github.com/liuhailove/gmiter/constants"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/spi"
 	"strings"
 	"sync/atomic"
 	"time"
 
 	"github.com/pkg/errors"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/core/base"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/stat"
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/stat"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 )
 
 const (

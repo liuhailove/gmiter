@@ -1,10 +1,10 @@
 package config
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport/endpoint"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/transport/endpoint"
+	"github.com/liuhailove/gmiter/util"
 	"strconv"
 	"strings"
 )
@@ -23,7 +23,6 @@ var (
 	RuntimePort = -1
 )
 
-//
 // GetHeartbeatIntervalMs
 // Get heartbeat interval in milliseconds.
 //
@@ -32,15 +31,14 @@ func GetHeartbeatIntervalMs() uint64 {
 	return config.HeartBeatIntervalMs()
 }
 
-//
 // GetConsoleServerList
 // Get a list of Endpoint(protocol, ip/domain, port) indicating sea Dashboard's address.<br>
 // NOTE: only support <b>HTTP</b> and <b>HTTPS</b> protocol
 //
 // @return list of Endpoint(protocol, ip/domain, port). <br>
-//        <b>May not be null</b>. <br>
-//        An empty list returned when not configured.
 //
+//	<b>May not be null</b>. <br>
+//	An empty list returned when not configured.
 func GetConsoleServerList() []endpoint.Endpoint {
 	consoleServer := config.ConsoleServer()
 	var arr []endpoint.Endpoint

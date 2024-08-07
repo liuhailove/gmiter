@@ -1,9 +1,9 @@
 package vo
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/stat"
 	"github.com/go-basic/uuid"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/stat"
 )
 
 // NodeVo This class is view object of DefaultNode or ClusterNode.

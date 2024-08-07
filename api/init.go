@@ -14,15 +14,15 @@ import (
 
 	"github.com/pkg/errors"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/core/log/metric"
-	"git.garena.com/honggang.liu/seamiter-go/core/system_metric"
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/core/log/metric"
+	"github.com/liuhailove/gmiter/core/system_metric"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 )
 
-type GetRedisConfigFunc func()(host string,port int64,password string)
+type GetRedisConfigFunc func() (host string, port int64, password string)
 
 func init() {
 	// 种子初始化
@@ -78,8 +78,8 @@ func InitWithConfigFile(configPath string) error {
 }
 
 // InitWithConfigFile 根据给定的YAML文件路径和Redis配置Func初始化seamiter
-func InitWithConfigFileAndRedisConfig(configPath string,redisConfigFunc GetRedisConfigFunc) error {
-	host,port,pwd:=redisConfigFunc()
+func InitWithConfigFileAndRedisConfig(configPath string, redisConfigFunc GetRedisConfigFunc) error {
+	host, port, pwd := redisConfigFunc()
 	seamiterCfg := config.GetGlobalConfig()
 	seamiterCfg.Sea.RedisClusterConfig.Host = host
 	seamiterCfg.Sea.RedisClusterConfig.Port = port

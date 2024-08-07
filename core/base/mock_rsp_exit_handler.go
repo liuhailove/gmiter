@@ -1,8 +1,8 @@
 package base
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"sort"
 	"sync"
 	"sync/atomic"

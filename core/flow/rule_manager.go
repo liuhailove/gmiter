@@ -7,13 +7,13 @@ import (
 
 	"github.com/pkg/errors"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/core/stat"
-	sbase "git.garena.com/honggang.liu/seamiter-go/core/stat/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/system_metric"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/core/stat"
+	sbase "github.com/liuhailove/gmiter/core/stat/base"
+	"github.com/liuhailove/gmiter/core/system_metric"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 )
 
 // TrafficControllerGenFunc represents the TrafficShapingController generator function of a specific control behavior.

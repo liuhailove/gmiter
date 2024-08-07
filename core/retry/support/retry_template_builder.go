@@ -2,10 +2,10 @@ package support
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/backoff"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/classify"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/policy"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/core/retry/backoff"
+	"github.com/liuhailove/gmiter/core/retry/classify"
+	"github.com/liuhailove/gmiter/core/retry/policy"
 )
 
 // * Fluent API to configure new instance of RetryTemplate. For detailed description of each

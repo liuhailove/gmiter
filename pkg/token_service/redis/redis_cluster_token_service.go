@@ -11,10 +11,10 @@ import (
 	"github.com/go-redis/redis/v8"
 	jsoniter "github.com/json-iterator/go"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/core/flow"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/core/flow"
+	"github.com/liuhailove/gmiter/logging"
 )
 
 // 定义Lua脚本
@@ -44,7 +44,7 @@ var (
 )
 
 const (
-	DefaultSeaPrefix = "Sea"
+	DefaultSeaPrefix = "{Sea}"
 )
 
 // RedisClusterTokenService redis集群Token服务
@@ -86,17 +86,19 @@ func NewRedisClient(conf *config.RedisClusterConfig) (*RedisClusterTokenService,
 			WriteTimeout: 1 * time.Second,
 		})
 	} else {
-
+		redisClient = redis.NewClient(&redis.Options{
+			Addr:         redisAddrList[0],
+			Password:     conf.Password,
+			DB:           0,
+			PoolSize:     10,
+			ReadTimeout:  1 * time.Second,
+			WriteTimeout: 1 * time.Second,
+		})
 	}
-
-	redisClient2 := &redis.Client{}
-
 	// 将Lua脚本加载到Redis中
 	scriptSha, err := redis.NewScript(luaScript).Load(context.Background(), redisClient).Result()
 	// 流控规则(无论什么时候对象都要存在，要不然引用时会存在空指针)
 	tokenServiceClient := &RedisClusterTokenService{client: redisClient, scriptSha: scriptSha}
-	tokenServiceClient := &RedisClusterTokenService{client: redisClient2, scriptSha: scriptSha}
-
 	if err != nil {
 		logging.Error(err, "redis cluster load script error")
 		//Lua 脚本上传失败 scriptSha置为空""，后续直接通过脚本调用
@@ -170,7 +172,6 @@ func (r *RedisClusterTokenService) acquireClusterToken(client redis.UniversalCli
 		result, err = client.EvalSha(context.Background(), r.scriptSha, []string{DefaultSeaPrefix + "_" + config.AppName() + "_" + rule.ID + "_" + rule.Resource}, rule.ClusterConfig.GlobalThreshold, acquireCount).Result()
 
 	}
-
 	if err != nil {
 		var e *net.OpError
 		if errors.As(err, &e) && strings.Contains(e.Err.Error(), "connect") {

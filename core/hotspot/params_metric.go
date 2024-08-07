@@ -1,6 +1,6 @@
 package hotspot
 
-import "git.garena.com/honggang.liu/seamiter-go/core/hotspot/cache"
+import "github.com/liuhailove/gmiter/core/hotspot/cache"
 
 const (
 	ConcurrencyMaxCount = 4000

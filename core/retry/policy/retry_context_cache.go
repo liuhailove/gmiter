@@ -1,8 +1,8 @@
 package policy
 
-import "git.garena.com/honggang.liu/seamiter-go/core/retry"
+import "github.com/liuhailove/gmiter/core/retry"
 
-//RtyContextCache 上下文重试cache
+// RtyContextCache 上下文重试cache
 type RtyContextCache interface {
 
 	// Get 根据key获取重试上下文

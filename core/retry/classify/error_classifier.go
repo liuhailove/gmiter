@@ -1,7 +1,7 @@
 package classify
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/logging"
 	"regexp"
 	"strings"
 )

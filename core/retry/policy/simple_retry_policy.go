@@ -2,9 +2,9 @@ package policy
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/classify"
-	"git.garena.com/honggang.liu/seamiter-go/core/retry/context"
+	"github.com/liuhailove/gmiter/core/retry"
+	"github.com/liuhailove/gmiter/core/retry/classify"
+	"github.com/liuhailove/gmiter/core/retry/context"
 	"strconv"
 )
 
@@ -15,9 +15,10 @@ var (
 
 // SimpleRetryPolicy 根据具体的错误重试固定次数.
 // 例如
-//  retryTemplate = new RetryTemplate(new SimpleRetryPolicy(3));
-//  retryTemplate.execute(callback);
-//  上面的例子会至少重试一次，最多重试3次
+//
+//	retryTemplate = new RetryTemplate(new SimpleRetryPolicy(3));
+//	retryTemplate.execute(callback);
+//	上面的例子会至少重试一次，最多重试3次
 type SimpleRetryPolicy struct {
 	MaxAttempts         int32
 	RetryableClassifier *classify.ErrorClassifier

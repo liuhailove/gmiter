@@ -2,8 +2,8 @@ package flow
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/stat"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/stat"
 )
 
 // ClusterMetric 集群Metric

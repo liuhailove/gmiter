@@ -1,7 +1,7 @@
 package api
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/core/base"
 )
 
 // WithEntry 通用entry入口

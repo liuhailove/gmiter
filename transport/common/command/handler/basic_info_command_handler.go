@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/transport/common/command"
+	"github.com/liuhailove/gmiter/util"
 )
 
 var (

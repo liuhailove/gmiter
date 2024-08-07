@@ -3,7 +3,7 @@ package base
 import (
 	"errors"
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/util"
 	"strconv"
 	"strings"
 )

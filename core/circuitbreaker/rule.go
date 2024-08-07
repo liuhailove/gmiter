@@ -2,7 +2,7 @@ package circuitbreaker
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/util"
 )
 
 // Strategy represents the strategy of circuit breaker.

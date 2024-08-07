@@ -1,10 +1,10 @@
 package mock
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/base"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"strings"
 )
 
@@ -80,7 +80,7 @@ func (s *Slot) Check(ctx *base.EntryContext) *base.TokenResult {
 			continue
 		}
 		// mock命中，打印请求和mock数据
-		logging.Info("mock hits", "resourceName", res, "metadata", ctx.Input.MetaData,"request", ctx.Input.Args, "mockData", r.String())
+		logging.Info("mock hits", "resourceName", res, "metadata", ctx.Input.MetaData, "request", ctx.Input.Args, "mockData", r.String())
 		mockCounter.Add(1, ctx.Resource.Name())
 		return r
 	}

@@ -1,7 +1,7 @@
 package util
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/logging"
 	"github.com/pkg/errors"
 )
 

@@ -3,8 +3,8 @@ package api
 import (
 	"context"
 	"fmt"
-	metric_exporter "git.garena.com/honggang.liu/seamiter-go/exporter/metric"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	metric_exporter "github.com/liuhailove/gmiter/exporter/metric"
+	"github.com/liuhailove/gmiter/util"
 	"log"
 	"net"
 	"net/http"

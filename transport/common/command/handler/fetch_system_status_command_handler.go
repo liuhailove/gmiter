@@ -1,6 +1,6 @@
 package handler
 
-import "git.garena.com/honggang.liu/seamiter-go/transport/common/command"
+import "github.com/liuhailove/gmiter/transport/common/command"
 
 var (
 	fetchSystemStatusCommandHandlerInst = new(fetchSystemStatusCommandHandler)

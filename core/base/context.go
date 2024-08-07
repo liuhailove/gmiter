@@ -1,7 +1,7 @@
 package base
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/util"
 )
 
 type EntryContext struct {

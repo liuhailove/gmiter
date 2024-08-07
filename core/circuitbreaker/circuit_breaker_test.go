@@ -1,10 +1,10 @@
 package circuitbreaker
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	sbase "git.garena.com/honggang.liu/seamiter-go/core/stat/base"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/base"
+	sbase "github.com/liuhailove/gmiter/core/stat/base"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

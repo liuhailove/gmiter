@@ -1,10 +1,10 @@
 package request
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	config2 "git.garena.com/honggang.liu/seamiter-go/transport/common/transport/config"
-	"git.garena.com/honggang.liu/seamiter-go/util"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/liuhailove/gmiter/core/config"
+	config2 "github.com/liuhailove/gmiter/transport/common/transport/config"
+	"github.com/liuhailove/gmiter/util"
 	"strconv"
 )
 

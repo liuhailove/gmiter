@@ -1,13 +1,13 @@
 package metric
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/command"
-	config2 "git.garena.com/honggang.liu/seamiter-go/transport/common/transport/config"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport/endpoint"
-	"git.garena.com/honggang.liu/seamiter-go/transport/http/heartbeat/client"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/transport/common/command"
+	config2 "github.com/liuhailove/gmiter/transport/common/transport/config"
+	"github.com/liuhailove/gmiter/transport/common/transport/endpoint"
+	"github.com/liuhailove/gmiter/transport/http/heartbeat/client"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"strconv"
 	"sync"

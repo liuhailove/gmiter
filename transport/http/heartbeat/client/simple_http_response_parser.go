@@ -2,7 +2,7 @@ package client
 
 import (
 	"errors"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
+	"github.com/liuhailove/gmiter/logging"
 	"io/ioutil"
 	"net/http"
 	"strings"

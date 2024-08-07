@@ -3,9 +3,9 @@ package gray
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
 	"github.com/go-basic/uuid"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/logging"
 	"math/rand"
 	"strconv"
 	"strings"

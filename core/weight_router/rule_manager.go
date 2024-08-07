@@ -2,8 +2,8 @@ package weight_router
 
 import (
 	"fmt"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/logging"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/pkg/errors"
 	"math"
 	"math/rand"
@@ -191,7 +191,7 @@ func GetTargetNodeByWeightRule(validServiceName string, weightNodes []*WeightNod
 	return 0, errors.New("totalWeight=0, rollback to random strategy")
 }
 
-//isWeightRuleInEffect 判断权重规则是否实际生效
+// isWeightRuleInEffect 判断权重规则是否实际生效
 func isWeightRuleInEffect(node *WeightNode, serviceName string, rules []Rule) (isValid bool, weight int64) {
 	//权重规则生效的条件 服务名称相等&&IP 端口地址相等
 	for _, rule := range rules {

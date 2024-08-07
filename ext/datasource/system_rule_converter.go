@@ -1,6 +1,6 @@
 package datasource
 
-import "git.garena.com/honggang.liu/seamiter-go/core/system"
+import "github.com/liuhailove/gmiter/core/system"
 
 type SystemRule struct {
 	// ID represents the unique ID of the rule (optional).

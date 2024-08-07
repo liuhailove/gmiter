@@ -1,11 +1,11 @@
 package heartbeat
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
-	config2 "git.garena.com/honggang.liu/seamiter-go/transport/common/transport/config"
-	"git.garena.com/honggang.liu/seamiter-go/transport/common/transport/endpoint"
-	"git.garena.com/honggang.liu/seamiter-go/transport/http/heartbeat/client"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/logging"
+	config2 "github.com/liuhailove/gmiter/transport/common/transport/config"
+	"github.com/liuhailove/gmiter/transport/common/transport/endpoint"
+	"github.com/liuhailove/gmiter/transport/http/heartbeat/client"
 	"strconv"
 )
 

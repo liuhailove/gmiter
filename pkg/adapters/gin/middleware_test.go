@@ -1,14 +1,14 @@
 package gin
 
 import (
-	sea "git.garena.com/honggang.liu/seamiter-go/api"
-	"git.garena.com/honggang.liu/seamiter-go/core/circuitbreaker"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
-	"git.garena.com/honggang.liu/seamiter-go/core/flow"
-	"git.garena.com/honggang.liu/seamiter-go/core/hotspot"
-	"git.garena.com/honggang.liu/seamiter-go/core/system"
-	"git.garena.com/honggang.liu/seamiter-go/logging"
 	"github.com/gin-gonic/gin"
+	sea "github.com/liuhailove/gmiter/api"
+	"github.com/liuhailove/gmiter/core/circuitbreaker"
+	"github.com/liuhailove/gmiter/core/config"
+	"github.com/liuhailove/gmiter/core/flow"
+	"github.com/liuhailove/gmiter/core/hotspot"
+	"github.com/liuhailove/gmiter/core/system"
+	"github.com/liuhailove/gmiter/logging"
 	"github.com/stretchr/testify/assert"
 	"io"
 	"net/http"

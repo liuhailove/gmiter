@@ -3,10 +3,10 @@ package gin
 import (
 	"bytes"
 	"errors"
-	sea "git.garena.com/honggang.liu/seamiter-go/api"
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
-	"git.garena.com/honggang.liu/seamiter-go/core/config"
 	"github.com/gin-gonic/gin"
+	sea "github.com/liuhailove/gmiter/api"
+	"github.com/liuhailove/gmiter/core/base"
+	"github.com/liuhailove/gmiter/core/config"
 	"net/http"
 	"strings"
 )

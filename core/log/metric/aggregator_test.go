@@ -1,12 +1,12 @@
 package metric
 
 import (
-	"git.garena.com/honggang.liu/seamiter-go/core/base"
+	"github.com/liuhailove/gmiter/core/base"
 	"testing"
 	"time"
 
-	"git.garena.com/honggang.liu/seamiter-go/core/stat"
-	"git.garena.com/honggang.liu/seamiter-go/util"
+	"github.com/liuhailove/gmiter/core/stat"
+	"github.com/liuhailove/gmiter/util"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )
