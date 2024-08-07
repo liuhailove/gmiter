@@ -10,7 +10,6 @@ require (
 	github.com/fatih/structs v1.1.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-basic/uuid v1.0.0
-	github.com/go-redis/redis/v8 v8.11.5
 	github.com/golang/protobuf v1.5.4
 	github.com/json-iterator/go v1.1.12
 	github.com/micro/go-micro v1.18.0
@@ -35,7 +34,6 @@ require (
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
