@@ -1,0 +1,19 @@
+version: "v1"
+sea:
+  closeAll: false
+  app:
+    name: "my-golang-jobs-2"
+    type: 0
+  log:
+    dir: "go-scheduler"
+    usePid: false
+    metric:
+      singleFileMaxSize: 52428800
+      maxFileCount: 7
+      flushIntervalSec: 1
+  dashboard:
+    server: http://localhost:8080
+    port: 8088
+    openConnectDashboard: true
+    heartBeatDynamicRouterFlag:
+
