@@ -4,6 +4,7 @@ import (
 	"context"
 	ext_micro "github.com/liuhailove/gmiter/ext/micro"
 	rpb "github.com/liuhailove/gmiter/pkg/adapters/microv4_opentrace/reflection/grpc_reflection_v1alpha"
+	micro "go-micro.dev/v4"
 	"go-micro.dev/v4/server"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
