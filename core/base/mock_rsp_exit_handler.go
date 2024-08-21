@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	// resMaxAliveTimeMs 资源最大存活时间，5min，超过5分钟会更新，并重新上报到server
-	resMaxAliveTimeMs uint64 = 5 * 60 * 1000
+	// resMaxAliveTimeMs 资源最大存活时间，20min，超过20分钟会更新，并重新上报到server
+	resMaxAliveTimeMs uint64 = 20 * 60 * 1000
 )
 
 func MockRspExitHandler(entry *SeaEntry, ctx *EntryContext) error {

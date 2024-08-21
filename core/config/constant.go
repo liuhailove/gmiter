@@ -48,7 +48,7 @@ const (
 	DefaultSendIntervalMs     = 2000
 	DefaultSendMetricsApiPath = "/api/receiveMetrics"
 
-	DefaultSendRspIntervalMs     = 2000
+	DefaultSendRspIntervalMs     = 5000
 	DefaultSendRequestIntervalMs = 2000
 	DefaultSendRspApiPath        = "/api/receiveRsp"
 	DefaultSendRequestApiPath    = "/api/receiveRequest"
