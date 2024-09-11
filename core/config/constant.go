@@ -30,7 +30,7 @@ const (
 	DefaultHeartbeatRemovePath = "/registry/removeMachine"
 	DefaultHeartbeatIntervalMs = 10000
 
-	DefaultFetchRuleIntervalMs = 500
+	DefaultFetchRuleIntervalMs = 2000
 
 	// DefaultFindMaxVersionApiPath 默认获取系统规则相关接口
 	DefaultFindMaxVersionApiPath        = "/api/findMaxVersion"
