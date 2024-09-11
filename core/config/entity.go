@@ -24,7 +24,7 @@ const (
 type Entity struct {
 	// Version represents the format version of the entity.
 	Version string
-	Sea     SeaConfig
+	Sea     GConfig
 }
 
 // FileDatasourceConfig 文件持久化存储配置
@@ -112,7 +112,7 @@ type RedisClusterConfig struct {
 }
 
 // SeaConfig represent the general configuration of sea.
-type SeaConfig struct {
+type GConfig struct {
 	CloseAll bool `yaml:"closeAll"`
 	// 控制台
 	Dashboard struct {
@@ -271,7 +271,7 @@ type SystemStatConfig struct {
 func NewDefaultConfig() *Entity {
 	return &Entity{
 		Version: "v1",
-		Sea: SeaConfig{
+		Sea: GConfig{
 			CloseAll: true,
 			App: struct {
 				Name string
@@ -446,7 +446,7 @@ func CheckValid(entity *Entity) error {
 	return checkConfValid(&entity.Sea)
 }
 
-func checkConfValid(conf *SeaConfig) error {
+func checkConfValid(conf *GConfig) error {
 	if conf == nil {
 		return errors.New("Nil globalCfg")
 	}
