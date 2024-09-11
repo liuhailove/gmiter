@@ -31,7 +31,7 @@ func TestName(t *testing.T) {
 		Transport: transport,
 	}
 
-	var req, _ = http.NewRequest(http.MethodGet, "http://10.53.73.120/seamiter", nil)
+	var req, _ = http.NewRequest(http.MethodGet, "http://10.53.73.120/gmiter", nil)
 	resp, err := httpClient.Do(req)
 	if err != nil {
 		fmt.Println(err)

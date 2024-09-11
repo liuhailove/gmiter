@@ -83,5 +83,5 @@ const (
 	DefaultClientMaxAllowQps = 10000.0
 
 	// DefaultEtcdV3Prefix 默认的EtcdV3前缀
-	DefaultEtcdV3Prefix = "seamiter_etcd_v3"
+	DefaultEtcdV3Prefix = "gmiter_etcd_v3"
 )

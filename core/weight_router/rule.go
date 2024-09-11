@@ -52,7 +52,7 @@ func (r *Rule) ResourceName() string {
 	return r.TargetAddress
 }
 
-// WeightNode 用于seamiter节点权重计算
+// WeightNode 用于gmiter节点权重计算
 type WeightNode struct {
 	Address string `json:"address"`
 }

@@ -49,7 +49,7 @@ func InitWithParser(configBytes []byte, parser func([]byte) (*config.Entity, err
 	return InitWithConfig(confEntity)
 }
 
-// InitWithConfig 使用配置初始化Seamiter
+// InitWithConfig 使用配置初始化gmiter
 func InitWithConfig(confEntity *config.Entity) (err error) {
 	defer func() {
 		if r := recover(); r != nil {
@@ -72,18 +72,18 @@ func InitWithConfig(confEntity *config.Entity) (err error) {
 	return initCoreComponents()
 }
 
-// InitWithConfigFile 根据给定的YAML文件路径初始化seamiter
+// InitWithConfigFile 根据给定的YAML文件路径初始化gmiter
 func InitWithConfigFile(configPath string) error {
 	return initsea(configPath)
 }
 
-// InitWithConfigFile 根据给定的YAML文件路径和Redis配置Func初始化seamiter
+// InitWithConfigFile 根据给定的YAML文件路径和Redis配置Func初始化gmiter
 func InitWithConfigFileAndRedisConfig(configPath string, redisConfigFunc GetRedisConfigFunc) error {
 	host, port, pwd := redisConfigFunc()
-	seamiterCfg := config.GetGlobalConfig()
-	seamiterCfg.Sea.RedisClusterConfig.Host = host
-	seamiterCfg.Sea.RedisClusterConfig.Port = port
-	seamiterCfg.Sea.RedisClusterConfig.Password = pwd
+	gmiterCfg := config.GetGlobalConfig()
+	gmiterCfg.Sea.RedisClusterConfig.Host = host
+	gmiterCfg.Sea.RedisClusterConfig.Port = port
+	gmiterCfg.Sea.RedisClusterConfig.Password = pwd
 
 	return initsea(configPath)
 }

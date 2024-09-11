@@ -68,6 +68,6 @@ rules/
 gslog
 rules
 
-seamiter-go.iml
+gmiter-go.iml
 middleware_test/resources
 go-scheduler/

@@ -39,7 +39,7 @@ func WeightSelect(services []*registry.Service) selector.Next {
 		nodes = append(nodes, service.Nodes...)
 	}
 
-	// weightNodes 用于seamiter节点权重计算
+	// weightNodes 用于gmiter节点权重计算
 	weightNodes := make([]*weight_router.WeightNode, 0, len(services))
 	for _, node := range nodes {
 		weightNode := &weight_router.WeightNode{Address: node.Address}
@@ -100,7 +100,7 @@ func GenStrategyWithRouterRules(rules []weight_router.Rule) selector.Strategy {
 			nodes = append(nodes, service.Nodes...)
 		}
 
-		// weightNodes 用于seamiter节点权重计算
+		// weightNodes 用于gmiter节点权重计算
 		weightNodes := make([]*weight_router.WeightNode, 0, len(services))
 		for _, node := range nodes {
 			weightNode := &weight_router.WeightNode{Address: node.Address}
