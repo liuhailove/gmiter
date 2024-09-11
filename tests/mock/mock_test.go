@@ -18,12 +18,12 @@ func Initsea() {
 	// We should initialize sea first.
 	conf := config.NewDefaultConfig()
 	// for testing, logging output to console
-	conf.Sea.Log.Logger = logging.NewConsoleLogger()
-	conf.Sea.Log.Metric.FlushIntervalSec = 0
-	conf.Sea.Stat.System.CollectIntervalMs = 0
-	conf.Sea.Stat.System.CollectMemoryIntervalMs = 0
-	conf.Sea.Stat.System.CollectCpuIntervalMs = 0
-	conf.Sea.Stat.System.CollectLoadIntervalMs = 0
+	conf.Conf.Log.Logger = logging.NewConsoleLogger()
+	conf.Conf.Log.Metric.FlushIntervalSec = 0
+	conf.Conf.Stat.System.CollectIntervalMs = 0
+	conf.Conf.Stat.System.CollectMemoryIntervalMs = 0
+	conf.Conf.Stat.System.CollectCpuIntervalMs = 0
+	conf.Conf.Stat.System.CollectLoadIntervalMs = 0
 	err := api.InitWithConfig(conf)
 	if err != nil {
 		log.Fatal(err)

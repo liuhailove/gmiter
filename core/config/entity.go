@@ -24,7 +24,7 @@ const (
 type Entity struct {
 	// Version represents the format version of the entity.
 	Version string
-	Sea     GConfig
+	Conf    GConfig
 }
 
 // FileDatasourceConfig 文件持久化存储配置
@@ -271,7 +271,7 @@ type SystemStatConfig struct {
 func NewDefaultConfig() *Entity {
 	return &Entity{
 		Version: "v1",
-		Sea: GConfig{
+		Conf: GConfig{
 			CloseAll: true,
 			App: struct {
 				Name string
@@ -443,7 +443,7 @@ func CheckValid(entity *Entity) error {
 	if len(entity.Version) == 0 {
 		return errors.New("Empty version")
 	}
-	return checkConfValid(&entity.Sea)
+	return checkConfValid(&entity.Conf)
 }
 
 func checkConfValid(conf *GConfig) error {
@@ -477,146 +477,146 @@ func (entity *Entity) String() string {
 }
 
 func (entity *Entity) AppName() string {
-	return entity.Sea.App.Name
+	return entity.Conf.App.Name
 }
 
 func (entity *Entity) AppType() int32 {
-	return entity.Sea.App.Type
+	return entity.Conf.App.Type
 }
 
 func (entity *Entity) LogBaseDir() string {
-	return entity.Sea.Log.Dir
+	return entity.Conf.Log.Dir
 }
 
 func (entity *Entity) LogLevel() uint8 {
-	return entity.Sea.Log.Level
+	return entity.Conf.Log.Level
 }
 
 func (entity *Entity) Logger() logging.Logger {
-	return entity.Sea.Log.Logger
+	return entity.Conf.Log.Logger
 }
 
 // LogUsePid returns whether the log file name contains the PID suffix.
 func (entity *Entity) LogUsePid() bool {
-	return entity.Sea.Log.UsePid
+	return entity.Conf.Log.UsePid
 }
 
 func (entity *Entity) MetricExporterHTTPAddr() string {
-	return entity.Sea.Exporter.Metric.HttpAddr
+	return entity.Conf.Exporter.Metric.HttpAddr
 }
 
 func (entity *Entity) MetricLogFlushIntervalSec() uint32 {
-	return entity.Sea.Log.Metric.FlushIntervalSec
+	return entity.Conf.Log.Metric.FlushIntervalSec
 }
 
 func (entity *Entity) MetricExportHTTPPath() string {
-	return entity.Sea.Exporter.Metric.HttpPath
+	return entity.Conf.Exporter.Metric.HttpPath
 }
 
 func (entity *Entity) MetricExportHTTPAddr() string {
-	return entity.Sea.Exporter.Metric.HttpAddr
+	return entity.Conf.Exporter.Metric.HttpAddr
 }
 
 func (entity *Entity) MetricLogSingleFileMaxSize() uint64 {
-	return entity.Sea.Log.Metric.SingleFileMaxSize
+	return entity.Conf.Log.Metric.SingleFileMaxSize
 }
 
 func (entity *Entity) MetricLogMaxFileAmount() uint32 {
-	return entity.Sea.Log.Metric.MaxFileCount
+	return entity.Conf.Log.Metric.MaxFileCount
 }
 
 func (entity *Entity) SystemStatCollectIntervalMs() uint32 {
-	return entity.Sea.Stat.System.CollectIntervalMs
+	return entity.Conf.Stat.System.CollectIntervalMs
 }
 
 func (entity *Entity) LoadStatCollectIntervalMs() uint32 {
-	return entity.Sea.Stat.System.CollectLoadIntervalMs
+	return entity.Conf.Stat.System.CollectLoadIntervalMs
 }
 
 func (entity *Entity) CpuStatCollectIntervalMs() uint32 {
-	return entity.Sea.Stat.System.CollectCpuIntervalMs
+	return entity.Conf.Stat.System.CollectCpuIntervalMs
 }
 
 func (entity *Entity) UseCacheTime() bool {
-	return entity.Sea.UseCacheTime
+	return entity.Conf.UseCacheTime
 }
 
 func (entity *Entity) MemoryStatCollectIntervalMs() uint32 {
-	return entity.Sea.Stat.System.CollectMemoryIntervalMs
+	return entity.Conf.Stat.System.CollectMemoryIntervalMs
 }
 
 func (entity *Entity) GlobalStatisticIntervalMsTotal() uint32 {
-	return entity.Sea.Stat.GlobalStatisticIntervalMsTotal
+	return entity.Conf.Stat.GlobalStatisticIntervalMsTotal
 }
 
 func (entity *Entity) GlobalStatisticSampleCountTotal() uint32 {
-	return entity.Sea.Stat.GlobalStatisticSampleCountTotal
+	return entity.Conf.Stat.GlobalStatisticSampleCountTotal
 }
 
 func (entity *Entity) MetricStatisticIntervalMs() uint32 {
-	return entity.Sea.Stat.MetricStatisticIntervalMs
+	return entity.Conf.Stat.MetricStatisticIntervalMs
 }
 
 func (entity *Entity) MetricStatisticSampleCount() uint32 {
-	return entity.Sea.Stat.MetricStatisticSampleCount
+	return entity.Conf.Stat.MetricStatisticSampleCount
 }
 
 func (entity *Entity) DashboardServer() string {
-	return entity.Sea.Dashboard.Server
+	return entity.Conf.Dashboard.Server
 }
 
 func (entity *Entity) DashboardPort() uint32 {
-	return entity.Sea.Dashboard.Port
+	return entity.Conf.Dashboard.Port
 }
 
 func (entity *Entity) HeartbeatClintIp() string {
-	return entity.Sea.Dashboard.HeartbeatClientIp
+	return entity.Conf.Dashboard.HeartbeatClientIp
 }
 
 func (entity *Entity) HeartbeatApiPath() string {
-	return entity.Sea.Dashboard.HeartbeatApiPath
+	return entity.Conf.Dashboard.HeartbeatApiPath
 }
 
 func (entity *Entity) HeartBeatIntervalMs() uint64 {
-	return entity.Sea.Dashboard.HeartBeatIntervalMs
+	return entity.Conf.Dashboard.HeartBeatIntervalMs
 }
 
 func (entity *Entity) CloseAll() bool {
-	return entity.Sea.CloseAll
+	return entity.Conf.CloseAll
 }
 
 func (entity *Entity) RuleConsistentMode() RulePersistencetMode {
-	return entity.Sea.RulePersistentMode
+	return entity.Conf.RulePersistentMode
 }
 
 func (entity *Entity) SourceFilePath() string {
-	return entity.Sea.FileDatasourceConfig.SourceFilePath
+	return entity.Conf.FileDatasourceConfig.SourceFilePath
 }
 
 func (entity *Entity) FlowRuleName() string {
-	return entity.Sea.FileDatasourceConfig.FlowRuleName
+	return entity.Conf.FileDatasourceConfig.FlowRuleName
 }
 
 func (entity *Entity) AuthorityRuleName() string {
-	return entity.Sea.FileDatasourceConfig.AuthorityRuleName
+	return entity.Conf.FileDatasourceConfig.AuthorityRuleName
 }
 
 func (entity *Entity) DegradeRuleName() string {
-	return entity.Sea.FileDatasourceConfig.DegradeRuleName
+	return entity.Conf.FileDatasourceConfig.DegradeRuleName
 }
 
 func (entity *Entity) SystemRuleName() string {
-	return entity.Sea.FileDatasourceConfig.SystemRuleName
+	return entity.Conf.FileDatasourceConfig.SystemRuleName
 }
 
 func (entity *Entity) HotspotRuleName() string {
-	return entity.Sea.FileDatasourceConfig.HotspotRuleName
+	return entity.Conf.FileDatasourceConfig.HotspotRuleName
 }
 
 func (entity *Entity) MockRuleName() string {
-	return entity.Sea.FileDatasourceConfig.MockRuleName
+	return entity.Conf.FileDatasourceConfig.MockRuleName
 }
 
 func (entity *Entity) ImmediatelyFetch() bool {
-	return entity.Sea.Dashboard.ImmediatelyFetch
+	return entity.Conf.Dashboard.ImmediatelyFetch
 }

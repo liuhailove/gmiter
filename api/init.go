@@ -81,9 +81,9 @@ func InitWithConfigFile(configPath string) error {
 func InitWithConfigFileAndRedisConfig(configPath string, redisConfigFunc GetRedisConfigFunc) error {
 	host, port, pwd := redisConfigFunc()
 	gmiterCfg := config.GetGlobalConfig()
-	gmiterCfg.Sea.RedisClusterConfig.Host = host
-	gmiterCfg.Sea.RedisClusterConfig.Port = port
-	gmiterCfg.Sea.RedisClusterConfig.Password = pwd
+	gmiterCfg.Conf.RedisClusterConfig.Host = host
+	gmiterCfg.Conf.RedisClusterConfig.Port = port
+	gmiterCfg.Conf.RedisClusterConfig.Password = pwd
 
 	return initsea(configPath)
 }

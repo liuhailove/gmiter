@@ -101,12 +101,12 @@ func loadGlobalConfigFromYamlFile(filePath string) error {
 		return err
 	}
 	logging.Info("[Config] Resolving sea config from file", "file", filePath)
-	return checkConfValid(&(globalCfg.Sea))
+	return checkConfValid(&(globalCfg.Conf))
 }
 
 func overrideItemsFromSystemEnv() error {
 	if appName := os.Getenv(AppNameEnvKey); !util.IsBlank(appName) {
-		globalCfg.Sea.App.Name = appName
+		globalCfg.Conf.App.Name = appName
 	}
 
 	if appTypeStr := os.Getenv(AppTypeEnvKey); !util.IsBlank(appTypeStr) {
@@ -114,7 +114,7 @@ func overrideItemsFromSystemEnv() error {
 		if err != nil {
 			return err
 		}
-		globalCfg.Sea.App.Type = int32(appType)
+		globalCfg.Conf.App.Type = int32(appType)
 	}
 
 	if addPidStr := os.Getenv(LogNamePidEnvKey); !util.IsBlank(addPidStr) {
@@ -122,12 +122,12 @@ func overrideItemsFromSystemEnv() error {
 		if err != nil {
 			return err
 		}
-		globalCfg.Sea.Log.UsePid = addPid
+		globalCfg.Conf.Log.UsePid = addPid
 	}
 	if logDir := os.Getenv(LogDirEnvKey); !util.IsBlank(logDir) {
-		globalCfg.Sea.Log.Dir = logDir
+		globalCfg.Conf.Log.Dir = logDir
 	}
-	return checkConfValid(&(globalCfg.Sea))
+	return checkConfValid(&(globalCfg.Conf))
 }
 
 func initializeLogConfig(logDir string, usePid bool) (err error) {
@@ -253,42 +253,42 @@ func MetricStatisticSampleCount() uint32 {
 }
 
 func ConsoleServer() string {
-	return globalCfg.Sea.Dashboard.Server
+	return globalCfg.Conf.Dashboard.Server
 }
 
 func ConsolePort() uint32 {
-	return globalCfg.Sea.Dashboard.Port
+	return globalCfg.Conf.Dashboard.Port
 }
 
 func HeartbeatClintIp() string {
 	if AutoHeartbeatClientIp() {
 		return util.GetIP()
 	}
-	return globalCfg.Sea.Dashboard.HeartbeatClientIp
+	return globalCfg.Conf.Dashboard.HeartbeatClientIp
 }
 
 func AutoHeartbeatClientIp() bool {
-	return globalCfg.Sea.Dashboard.AutoHeartbeatClientIp
+	return globalCfg.Conf.Dashboard.AutoHeartbeatClientIp
 }
 
 func HeartbeatApiPath() string {
-	return globalCfg.Sea.Dashboard.HeartbeatApiPath
+	return globalCfg.Conf.Dashboard.HeartbeatApiPath
 }
 
 func HeartbeatRemoveApiDefaultPath() string {
-	return globalCfg.Sea.Dashboard.HeartbeatRemoveApiPath
+	return globalCfg.Conf.Dashboard.HeartbeatRemoveApiPath
 }
 
 func HeartBeatIntervalMs() uint64 {
-	return globalCfg.Sea.Dashboard.HeartBeatIntervalMs
+	return globalCfg.Conf.Dashboard.HeartBeatIntervalMs
 }
 
 func HeartBeatDynamicRouterFlag() string {
-	return globalCfg.Sea.Dashboard.HeartBeatDynamicRouterFlag
+	return globalCfg.Conf.Dashboard.HeartBeatDynamicRouterFlag
 }
 
 func FetchRuleIntervalMs() uint64 {
-	return globalCfg.Sea.Dashboard.FetchRuleIntervalMs
+	return globalCfg.Conf.Dashboard.FetchRuleIntervalMs
 }
 
 func Version() string {
@@ -296,204 +296,204 @@ func Version() string {
 }
 
 func FindMaxVersionApiPath() string {
-	return globalCfg.Sea.Dashboard.FindMaxVersionApiPath
+	return globalCfg.Conf.Dashboard.FindMaxVersionApiPath
 }
 
 func QueryAllDegradeRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllDegradeRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllDegradeRuleApiPath
 }
 
 func QueryAllFlowRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllFlowRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllFlowRuleApiPath
 }
 
 func QueryAllParamFlowRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllParamFlowRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllParamFlowRuleApiPath
 }
 
 func QueryAllMockRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllMockRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllMockRuleApiPath
 }
 
 func QueryAllSystemRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllSystemRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllSystemRuleApiPath
 }
 
 func QueryAllAuthorityRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllAuthorityRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllAuthorityRuleApiPath
 }
 
 func QueryAllRetryRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllRetryRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllRetryRuleApiPath
 }
 
 func QueryAllGrayRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllGrayRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllGrayRuleApiPath
 }
 
 func QueryAllIsolationRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllIsolationRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllIsolationRuleApiPath
 }
 
 func QueryAllWeightRouterRuleApiPath() string {
-	return globalCfg.Sea.Dashboard.QueryAllWeightRouterRuleApiPath
+	return globalCfg.Conf.Dashboard.QueryAllWeightRouterRuleApiPath
 }
 func SendMetricIntervalMs() uint64 {
-	return globalCfg.Sea.Dashboard.SendMetricIntervalMs
+	return globalCfg.Conf.Dashboard.SendMetricIntervalMs
 }
 
 func SendMetricApiPath() string {
-	return globalCfg.Sea.Dashboard.SendMetricApiPath
+	return globalCfg.Conf.Dashboard.SendMetricApiPath
 }
 
 func SendRspApiPathIntervalMs() uint64 {
-	return globalCfg.Sea.Dashboard.SendRspApiPathIntervalMs
+	return globalCfg.Conf.Dashboard.SendRspApiPathIntervalMs
 }
 
 func SendRequestApiPathIntervalMs() uint64 {
-	return globalCfg.Sea.Dashboard.SendRequestApiPathIntervalMs
+	return globalCfg.Conf.Dashboard.SendRequestApiPathIntervalMs
 }
 
 func SendRspApiPath() string {
-	return globalCfg.Sea.Dashboard.SendRspApiPath
+	return globalCfg.Conf.Dashboard.SendRspApiPath
 }
 
 func SendRequestApiPath() string {
-	return globalCfg.Sea.Dashboard.SendRequestApiPath
+	return globalCfg.Conf.Dashboard.SendRequestApiPath
 }
 
 func ProxyUrl() string {
-	return globalCfg.Sea.Dashboard.ProxyUrl
+	return globalCfg.Conf.Dashboard.ProxyUrl
 }
 
 func OpenConnectDashboard() bool {
-	return globalCfg.Sea.Dashboard.OpenConnectDashboard
+	return globalCfg.Conf.Dashboard.OpenConnectDashboard
 }
 
 func CloseAll() bool {
-	return globalCfg.Sea.CloseAll
+	return globalCfg.Conf.CloseAll
 }
 
 func RuleConsistentModeType() RulePersistencetMode {
-	return globalCfg.Sea.RulePersistentMode
+	return globalCfg.Conf.RulePersistentMode
 }
 
 func SourceFilePath() string {
-	return globalCfg.Sea.FileDatasourceConfig.SourceFilePath
+	return globalCfg.Conf.FileDatasourceConfig.SourceFilePath
 }
 
 func FlowRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.FlowRuleName
+	return globalCfg.Conf.FileDatasourceConfig.FlowRuleName
 }
 
 func AuthorityRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.AuthorityRuleName
+	return globalCfg.Conf.FileDatasourceConfig.AuthorityRuleName
 }
 
 func DegradeRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.DegradeRuleName
+	return globalCfg.Conf.FileDatasourceConfig.DegradeRuleName
 }
 
 func SystemRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.SystemRuleName
+	return globalCfg.Conf.FileDatasourceConfig.SystemRuleName
 }
 
 func HotspotRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.HotspotRuleName
+	return globalCfg.Conf.FileDatasourceConfig.HotspotRuleName
 }
 
 func MockRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.MockRuleName
+	return globalCfg.Conf.FileDatasourceConfig.MockRuleName
 }
 
 func RetryRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.RetryRuleName
+	return globalCfg.Conf.FileDatasourceConfig.RetryRuleName
 }
 
 func GrayRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.GrayRuleName
+	return globalCfg.Conf.FileDatasourceConfig.GrayRuleName
 }
 
 func IsolationRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.IsolationRuleName
+	return globalCfg.Conf.FileDatasourceConfig.IsolationRuleName
 }
 
 func WeightRouterRuleName() string {
-	return globalCfg.Sea.FileDatasourceConfig.WeightRouterRuleName
+	return globalCfg.Conf.FileDatasourceConfig.WeightRouterRuleName
 }
 func ImmediatelyFetch() bool {
-	return globalCfg.Sea.Dashboard.ImmediatelyFetch
+	return globalCfg.Conf.Dashboard.ImmediatelyFetch
 }
 
 func Namespace() string {
-	return globalCfg.Sea.ClusterConfig.Namespace
+	return globalCfg.Conf.ClusterConfig.Namespace
 }
 
 func ClientNamespace() string {
-	return globalCfg.Sea.ClusterConfig.ClientNamespace
+	return globalCfg.Conf.ClusterConfig.ClientNamespace
 }
 
 func MaxAllowQps() float64 {
-	return globalCfg.Sea.ClusterConfig.MaxAllowQps
+	return globalCfg.Conf.ClusterConfig.MaxAllowQps
 }
 
 func ClientMaxAllowQps() float64 {
-	return globalCfg.Sea.ClusterConfig.ClientMaxAllowQps
+	return globalCfg.Conf.ClusterConfig.ClientMaxAllowQps
 }
 
 func EtcdDatasourceEndpoints() string {
-	return globalCfg.Sea.EtcdV3DatasourceConfig.Endpoints
+	return globalCfg.Conf.EtcdV3DatasourceConfig.Endpoints
 }
 
 func EtcdDatasourceKeyPrefix() string {
-	return globalCfg.Sea.EtcdV3DatasourceConfig.KeyPrefix
+	return globalCfg.Conf.EtcdV3DatasourceConfig.KeyPrefix
 }
 
 func ApolloDatasourceAppId() string {
-	return globalCfg.Sea.ApolloDatasourceConfig.AppID
+	return globalCfg.Conf.ApolloDatasourceConfig.AppID
 }
 
 func ApolloDatasourceCluster() string {
-	return globalCfg.Sea.ApolloDatasourceConfig.Cluster
+	return globalCfg.Conf.ApolloDatasourceConfig.Cluster
 }
 
 func ApolloDatasourceIP() string {
-	return globalCfg.Sea.ApolloDatasourceConfig.IP
+	return globalCfg.Conf.ApolloDatasourceConfig.IP
 }
 
 func ApolloDatasourceNamespaceName() string {
-	return globalCfg.Sea.ApolloDatasourceConfig.NamespaceName
+	return globalCfg.Conf.ApolloDatasourceConfig.NamespaceName
 }
 
 func ApolloDatasourceIsBackupConfig() bool {
-	return globalCfg.Sea.ApolloDatasourceConfig.IsBackupConfig
+	return globalCfg.Conf.ApolloDatasourceConfig.IsBackupConfig
 }
 
 func ApolloDatasourceSecret() string {
-	return globalCfg.Sea.ApolloDatasourceConfig.Secret
+	return globalCfg.Conf.ApolloDatasourceConfig.Secret
 }
 
 // RedisClusterHost redis host
 func RedisClusterHost() string {
-	return globalCfg.Sea.RedisClusterConfig.Host
+	return globalCfg.Conf.RedisClusterConfig.Host
 }
 
 // RedisClusterPort redis port
 func RedisClusterPort() int64 {
-	return globalCfg.Sea.RedisClusterConfig.Port
+	return globalCfg.Conf.RedisClusterConfig.Port
 }
 
 // RedisClusterPassword redis集群密码
 func RedisClusterPassword() string {
-	return globalCfg.Sea.RedisClusterConfig.Password
+	return globalCfg.Conf.RedisClusterConfig.Password
 }
 
 // RedisClusterDatabase redis集群DB索引
 func RedisClusterDatabase() int {
-	return globalCfg.Sea.RedisClusterConfig.Database
+	return globalCfg.Conf.RedisClusterConfig.Database
 }
 
 // RedisIsCluster redis是否为集群
 func RedisIsCluster() bool {
-	return globalCfg.Sea.RedisClusterConfig.IsCluster
+	return globalCfg.Conf.RedisClusterConfig.IsCluster
 }

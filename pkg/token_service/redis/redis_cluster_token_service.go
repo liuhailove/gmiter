@@ -45,7 +45,7 @@ var (
 )
 
 const (
-	DefaultSeaPrefix = "{Sea}"
+	DefaultSeaPrefix = "{Conf}"
 )
 
 // RedisClusterTokenService redis集群Token服务
